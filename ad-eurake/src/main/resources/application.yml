@@ -1,4 +1,4 @@
-
+#单节点启动
 spring:
   application:
     name: ad-eureka
