@@ -11,6 +11,8 @@
 
     <modules>
         <module>ad-eurake</module>
+        <module>ad-gateway</module>
+        <module>ad-service</module>
     </modules>
 
     <parent>
@@ -20,7 +22,7 @@
     </parent>
 
     <properties>
-        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
     </properties>
 
     <dependencies>

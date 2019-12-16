@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: ad-gateway
+  main:
+    allow-bean-definition-overriding: true
+server:
+  port: 9000
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8000/eureka
+
+
+#zuul:
+#  routes:
+#    hello-service:
+#      path: /hello-service/**
