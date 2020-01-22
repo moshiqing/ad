@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>common</module>
+        <module>ad-users</module>
+        <module>ad-orders</module>
     </modules>
 
 

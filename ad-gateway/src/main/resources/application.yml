@@ -1,20 +1,29 @@
 spring:
   application:
     name: ad-gateway
-  main:
-    allow-bean-definition-overriding: true
+#  main:
+#    allow-bean-definition-overriding: true
 server:
   port: 9000
 
 eureka:
   client:
-    register-with-eureka: true
-    fetch-registry: true
     serviceUrl:
-      defaultZone: http://127.0.0.1:8000/eureka
+      defaultZone: http://127.0.0.1:8000/eureka/
 
 
-#zuul:
-#  routes:
-#    hello-service:
-#      path: /hello-service/**
+zuul:
+  routes:
+    hello-service:
+      path: /baidu/**
+      url: http://www.baidu.com
+    userApi:
+      path: /users/**
+      serviceId: ad-users
+    ordersApi:
+      path: /orders/**
+      serviceId: ad-orders
+
+#      stripPrefix: true
+#  prefix: /ad
+

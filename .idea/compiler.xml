@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ad-eurake" />
         <module name="ad-gateway" />
+        <module name="ad-orders" />
+        <module name="ad-users" />
         <module name="common" />
       </profile>
     </annotationProcessing>
@@ -20,6 +22,8 @@
       <module name="ad" options="-parameters" />
       <module name="ad-eurake" options="-parameters" />
       <module name="ad-gateway" options="-parameters" />
+      <module name="ad-orders" options="-parameters" />
+      <module name="ad-users" options="-parameters" />
       <module name="adeureka" options="-parameters" />
       <module name="common" options="-parameters" />
     </option>

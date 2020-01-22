@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/ad-eurake" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ad-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ad-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ad-service/ad-orders" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ad-service/ad-users" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ad-service/common" charset="UTF-8" />
   </component>
 </project>

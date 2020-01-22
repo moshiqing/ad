@@ -2,9 +2,12 @@
 spring:
   application:
     name: ad-eureka
-#  profiles: peer1  这个配置用于集群的开启 配合命令的使用 注释1部分 对应
+
 server:
   port: 8000
+#  servlet:
+#    context-path: /eureka
+
 eureka:
   instance:
     hostname: 127.0.0.1
@@ -13,7 +16,7 @@ eureka:
     fetch-registry: false
     register-with-eureka: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 #以下是集群配置
 #启动的命令
 #java -jar spring-cloud-eureka-0.0.1-SNAPSHOT.jar --spring.profiles.active=peer1  注释1部分
@@ -23,7 +26,7 @@ eureka:
 #spring:
 #  application:
 #    name: spring-cloud-eureka
-#  profiles: peer1
+#  profiles: peer1  #这个配置用于集群的开启 配合命令的使用 注释1部分 对应
 #server:
 #  port: 8000
 #eureka:

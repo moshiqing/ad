@@ -6,17 +6,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-@EnableZuulProxy
 @EnableEurekaClient
 @EnableHystrix
-public class gatewayApplication {
+@EnableFeignClients
+public class UsersApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(gatewayApplication.class,args);
+        SpringApplication.run(UsersApplication.class,args);
     }
 
     @Bean
