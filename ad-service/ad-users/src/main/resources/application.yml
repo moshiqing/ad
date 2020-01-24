@@ -1,12 +1,30 @@
-spring:
-  application:
-    name: ad-users
-
 server:
   port: 9100
 
 eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
   client:
     serviceUrl:
       defaultZone: http://127.0.0.1:8000/eureka/
 
+spring:
+  application:
+    name: ad-users
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ad?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+  jackson:
+    date-format:  yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

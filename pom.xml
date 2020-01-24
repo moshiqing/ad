@@ -23,6 +23,7 @@
 
     <properties>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <seata.version>1.0.0</seata.version>
     </properties>
 
     <dependencies>
@@ -36,6 +37,8 @@
             <artifactId>spring-cloud-starter-feign</artifactId>
             <version>1.4.7.RELEASE</version>
         </dependency>
+
+
     </dependencies>
 
     <dependencyManagement>
