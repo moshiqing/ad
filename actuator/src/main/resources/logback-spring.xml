@@ -2,7 +2,8 @@
 <configuration>
     <!-- 属性文件:在properties文件中找到对应的配置项 -->
     <springProperty scope="context" name="logging.path" source="logging.path"/>
-    <contextName>netty</contextName>
+    <springProperty scope="context" name="logging.file" source="logging.file"/>
+    <contextName>actuator</contextName>
     <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <!--格式化输出（配色）：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
@@ -21,14 +22,14 @@
         </filter>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>
-                %n%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} %n%caller{1} =====> %msg%n
+                %n%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} %n - %msg%n
             </pattern>
             <charset>UTF-8</charset>
         </encoder>
         <!--滚动策略-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--按时间保存日志 修改格式可以按小时、按天、月来保存-->
-            <fileNamePattern>${logging.path}/netty.info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${logging.path}/${logging.file}.info.%d{yyyy-MM-dd}.log</fileNamePattern>
             <!--保存时长-->
             <MaxHistory>90</MaxHistory>
             <!--文件大小-->
@@ -48,7 +49,7 @@
         <!--滚动策略-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--路径-->
-            <fileNamePattern>${logging.path}/netty.error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${logging.path}/${logging.file}.error.%d{yyyy-MM-dd}.log</fileNamePattern>
             <MaxHistory>90</MaxHistory>
         </rollingPolicy>
     </appender>
