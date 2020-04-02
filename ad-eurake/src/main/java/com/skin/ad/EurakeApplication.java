@@ -11,11 +11,11 @@ import org.springframework.context.annotation.Bean;
 @EnableEurekaServer
 @SpringBootApplication
 @EnableHystrixDashboard
-public class eurakeApplication {
+public class EurakeApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(eurakeApplication.class,args);
+        SpringApplication.run(EurakeApplication.class,args);
         System.out.println("start url: localhost:8000");
     }
 
