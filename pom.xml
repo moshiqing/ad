@@ -13,6 +13,7 @@
         <module>ad-eurake</module>
         <module>ad-gateway</module>
         <module>ad-service</module>
+        <module>actuator</module>
     </modules>
 
     <parent>
